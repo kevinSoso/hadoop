@@ -122,6 +122,7 @@ RUN mkdir -p /opt/protobuf-src \
       -o /opt/protobuf.tar.gz \
     && tar xzf /opt/protobuf.tar.gz --strip-components 1 -C /opt/protobuf-src \
     && cd /opt/protobuf-src \
+    && ./autogen.sh \
     && ./configure --prefix=/opt/protobuf \
     && make install \
     && cd /root \
